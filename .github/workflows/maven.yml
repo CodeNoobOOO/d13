@@ -49,6 +49,9 @@ jobs:
       - name: Check Maven dependency tree
         run: mvn -B dependency:tree
 
+      - name: Make Maven Wrapper executable
+        run: chmod +x mvnw
+
       - name: Install Snyk CLI
         uses: snyk/actions/setup@master
 
